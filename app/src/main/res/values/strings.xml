@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RUApp</string>
+    <string name="password">Senha</string>
+    <string name="forgot_password">Esqueci minha senha</string>
+    <string name="register">Registrar</string>
+    <string name="insert_name">Insira seu nome</string>
+    <string name="insert_password">Insira sua senha</string>
+    <string name="insert_password_again">Insira sua senha novamente</string>
+    <string name="insert_id">Insira seu CPF</string>
+    <string name="insert_email">Insira seu email</string>
+    <string name="insert_ufal_id">Insira seu número de matrícula</string>
+    <string name="name">Nome</string>
+    <string name="social_id">CPF</string>
+    <string name="ufal_id">Número de matrícula</string>
+    <string name="email">Email</string>
+    <string name="request_register">Solicitar registro</string>
+    //
+    <string name="greetings">Olá, </string>
+    <string name="see_menu">Ver Menu</string>
+    <string name="book">Agendamento</string>
+</resources>
