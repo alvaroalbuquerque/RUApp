@@ -20,4 +20,5 @@
     <string name="book">Agendamento</string>
     <string name="LUNCH">ALMOÇO</string>
     <string name="DINNER">JANTAR</string>
+    <string name="SHIFT">TURNO</string>
 </resources>
