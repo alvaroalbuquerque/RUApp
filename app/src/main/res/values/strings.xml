@@ -18,4 +18,6 @@
     <string name="greetings">Olá, </string>
     <string name="see_menu">Ver Menu</string>
     <string name="book">Agendamento</string>
+    <string name="LUNCH">ALMOÇO</string>
+    <string name="DINNER">JANTAR</string>
 </resources>

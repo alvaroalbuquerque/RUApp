@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.ruapp.SeeMenuPackage.SliderAdapter;
+
 public class SeeMenuActivity extends AppCompatActivity {
 
     private ViewPager nSlideViewPager;
