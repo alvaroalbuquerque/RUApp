@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.example.ruapp.ADMPackage.RegisterRequestPackage.MyRecViewAdapter;
-import com.example.ruapp.ADMPackage.RegisterRequestPackage.Student;
+import com.example.ruapp.Model.Student;
 import com.example.ruapp.R;
 
 import java.util.ArrayList;

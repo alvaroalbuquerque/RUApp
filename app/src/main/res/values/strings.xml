@@ -24,6 +24,7 @@
     <string name="registration_request">Requisições de Registro</string>
     <string name="add_menu">Atualizar menu</string>
     <string name="adm_menu">ADM MENU</string>
+    <string name="invalid_input">Entrada inválida</string>
 
 
 </resources>

@@ -1,9 +1,11 @@
-package com.example.ruapp.ADMPackage.RegisterRequestPackage;
+package com.example.ruapp.Model;
 
 public class Student {
     private String name;
+    private String email;
     private String CPF;
     private String nMatricula;
+    private String password;
 
     public Student(String name, String CPF, String nMatricula) {
         this.name = name;
@@ -13,6 +15,22 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setName(String name) {

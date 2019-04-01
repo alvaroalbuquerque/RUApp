@@ -1,6 +1,5 @@
 package com.example.ruapp.ADMPackage.RegisterRequestPackage;
 
-import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,12 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ruapp.Model.Student;
 import com.example.ruapp.R;
 
 import java.util.List;
 
 public class MyRecViewAdapter extends RecyclerView.Adapter<MyRecViewAdapter.MyRecViewHolder> {
-    private List< Student> studentList;
+    private List<Student> studentList;
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener{

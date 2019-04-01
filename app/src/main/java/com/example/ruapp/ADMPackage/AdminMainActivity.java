@@ -24,6 +24,8 @@ public class AdminMainActivity extends AppCompatActivity {
         regReqButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent registerRequestActivity = new Intent(AdminMainActivity.this,RegisterRequestActivity.class);
+                startActivity(registerRequestActivity);
 
             }
         });
@@ -31,9 +33,8 @@ public class AdminMainActivity extends AppCompatActivity {
         addMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextActivity = new Intent(AdminMainActivity.this,RegisterMenuActivity.class);
-                startActivity(nextActivity);
-                finish();
+                Intent registerMenuActivity = new Intent(AdminMainActivity.this,RegisterMenuActivity.class);
+                startActivity(registerMenuActivity);
             }
         });
     }

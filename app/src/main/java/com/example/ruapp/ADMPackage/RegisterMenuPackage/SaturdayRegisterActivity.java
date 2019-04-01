@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.ruapp.ADMPackage.AdminMainActivity;
 import com.example.ruapp.ADMPackage.RegisterMenuActivity;
 import com.example.ruapp.R;
 
@@ -50,7 +51,7 @@ public class SaturdayRegisterActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     //Pegar os dados e colocar na DB
-                    Intent nextActivity = new Intent(SaturdayRegisterActivity.this, RegisterMenuActivity.class);
+                    Intent nextActivity = new Intent(SaturdayRegisterActivity.this, AdminMainActivity.class);
                     startActivity(nextActivity);
                     finish();
                 }
