@@ -21,4 +21,9 @@
     <string name="LUNCH">ALMOÇO</string>
     <string name="DINNER">JANTAR</string>
     <string name="SHIFT">TURNO</string>
+    <string name="registration_request">Requisições de Registro</string>
+    <string name="add_menu">Atualizar menu</string>
+    <string name="adm_menu">ADM MENU</string>
+
+
 </resources>

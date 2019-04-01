@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ruapp.ADMPackage.RegisterMenuActivity;
+import com.example.ruapp.ADMPackage.RegisterRequestActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     Button loginButton;
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent proxTela = new Intent(MainActivity.this, SeeMenuActivity.class);
+                Intent proxTela = new Intent(MainActivity.this, RegisterRequestActivity.class);
                 startActivity(proxTela);
             }
         });

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ADMPackage.RegisterMenuPackage.MondayRegisterActivity" >
+
+    <TextView
+        android:id="@+id/textTitleViewID"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="Day of the Week"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textSubTitle1ViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="LUNCH"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/proteinViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Protein" />
+
+            <EditText
+                android:id="@+id/editProteinTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editProtein2TextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/vegLunchViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veg" />
+
+            <EditText
+                android:id="@+id/editVegLunchTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/riceViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rice" />
+
+            <EditText
+                android:id="@+id/editRiceTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/beanViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bean" />
+
+            <EditText
+                android:id="@+id/editBeanTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/food3ViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food 3" />
+
+            <EditText
+                android:id="@+id/editFood3TextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/saladViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salad" />
+
+            <EditText
+                android:id="@+id/editSaladTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/juiceViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Juice" />
+
+            <EditText
+                android:id="@+id/editJuiceTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/fruitViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit" />
+
+            <EditText
+                android:id="@+id/editFruitTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textSubTitleViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DINNER"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/soupViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soup" />
+
+            <EditText
+                android:id="@+id/editSoupTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/mainDishViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prato do DIa" />
+
+            <EditText
+                android:id="@+id/editMainDishTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editMainDish2TextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editMainDish3TextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/piesViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pies" />
+
+            <EditText
+                android:id="@+id/editPiesTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/cakesViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cakes" />
+
+            <EditText
+                android:id="@+id/editCakesTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/drinkViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drink" />
+
+            <EditText
+                android:id="@+id/editDrinkTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/vegDinnerViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veg" />
+
+            <EditText
+                android:id="@+id/editVegDinnerTextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editVegDinner2TextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editVegDinner3TextID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/nextButtonID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</LinearLayout>
