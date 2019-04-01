@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //FAZER LOGIN
-                Intent proxTela = new Intent(MainActivity.this, AdminMainActivity.class);
+                Intent proxTela = new Intent(MainActivity.this, UserMainActivity.class);
                 startActivity(proxTela);
             }
         });
