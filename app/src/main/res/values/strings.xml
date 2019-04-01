@@ -25,6 +25,11 @@
     <string name="add_menu">Atualizar menu</string>
     <string name="adm_menu">ADM MENU</string>
     <string name="invalid_input">Entrada inválida</string>
+    <string name="insert_date">Clique e insira a data:</string>
+    <string name="report_at_date">Relatório do dia:</string>
+    <string name="next">Próximo</string>
+    <string name="back">Voltar</string>
+    <string name="see_report">Ver Relatório</string>
 
 
 </resources>

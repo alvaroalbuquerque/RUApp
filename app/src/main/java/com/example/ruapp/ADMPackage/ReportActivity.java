@@ -2,7 +2,6 @@ package com.example.ruapp.ADMPackage;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.os.Build;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,67 +12,65 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ruapp.ADMPackage.RegisterMenuPackage.DatePickerFragment;
-import com.example.ruapp.ADMPackage.RegisterMenuPackage.MondayRegisterActivity;
 import com.example.ruapp.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class RegisterMenuActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
-    Button buttonPickDate;
-    Button buttonNext;
-    TextView textView;
+public class ReportActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
+    Button datePickerButton;
+    Button backButton;
+    TextView dataView;
+    TextView countView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_menu);
-        Intent currentIntent = getIntent();
+        setContentView(R.layout.activity_report);
+        Intent intent = getIntent();
         initView();
 
-        buttonPickDate.setOnClickListener(new View.OnClickListener() {
+        datePickerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment datePicker = new DatePickerFragment();
                 datePicker.show(getSupportFragmentManager(),"date picker");
+                //BUSCA A QUANTIDADE DE PESSOAS E ESCREVE NA countView
+                int count = 0;
+                countView.setText("Total de Agendamentos: " + Integer.toString(count));
             }
         });
 
-        buttonNext.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //VER SE UMA DATA APROPRIADA FOI SELECIONADA
-                //CHAMAR AGENDAR SEGUNDA FEIRA
-                Intent nextActivity = new Intent(RegisterMenuActivity.this, MondayRegisterActivity.class);
-                startActivity(nextActivity);
+                finish();
             }
         });
+
+
     }
 
     public void initView(){
-        buttonPickDate = findViewById(R.id.buttonID);
-        buttonNext = findViewById(R.id.button2);
-        textView = findViewById(R.id.textViewID);
+        datePickerButton = findViewById(R.id.dateButton);
+        backButton = findViewById(R.id.backButton);
+        dataView = findViewById(R.id.textView6);
+        countView = findViewById(R.id.textView7);
     }
+
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
         Calendar c = Calendar.getInstance();
         c.set(Calendar.YEAR,year);
         c.set(Calendar.MONTH,month);
         c.set(Calendar.DAY_OF_MONTH,dayOfMonth);
-        /*
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            c.set(Calendar.DAY_OF_WEEK, view.getFirstDayOfWeek());
-        }*/
-        SimpleDateFormat dt = new SimpleDateFormat("dd/MM - ");
-        String currentDateString = dt.format(c.getTime()) + c.get(Calendar.DAY_OF_WEEK);
+        SimpleDateFormat dt = new SimpleDateFormat("dd/MM");
+        String currentDateString = dt.format(c.getTime());
         if(isDateValid(year, month, dayOfMonth)){
-            textView.setText(currentDateString);
+            dataView.setText(currentDateString);
         }
-
-        //TextView textView = findViewById(R.id.textViewID);
 
     }
 
@@ -87,14 +84,14 @@ public class RegisterMenuActivity extends AppCompatActivity implements DatePicke
         pickedDate.set(Calendar.MONTH,month);
         pickedDate.set(Calendar.DAY_OF_MONTH,dayOfMonth);
 
-        if(pickedDate.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY){
+        if(pickedDate.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY){
             if(pickedDate.get(Calendar.YEAR) >= currentYear)
             {
                 //if (pickedDate.get(Calendar.MONTH) >=)
             }
             return true;
         }else{
-            Toast.makeText(RegisterMenuActivity.this,"Invalid Input",Toast.LENGTH_SHORT).show();
+            Toast.makeText(ReportActivity.this,"Invalid Input",Toast.LENGTH_SHORT).show();
         }
         return false;
     }

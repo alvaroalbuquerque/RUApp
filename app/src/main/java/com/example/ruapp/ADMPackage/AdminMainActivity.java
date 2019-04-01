@@ -13,6 +13,7 @@ public class AdminMainActivity extends AppCompatActivity {
     TextView title;
     Button regReqButton;
     Button addMenuButton;
+    Button seeReportButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +38,20 @@ public class AdminMainActivity extends AppCompatActivity {
                 startActivity(registerMenuActivity);
             }
         });
+
+        seeReportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent seeReportActivity = new Intent(AdminMainActivity.this,ReportActivity.class);
+                startActivity(seeReportActivity);
+            }
+        });
     }
 
     private void initView(){
         title = findViewById(R.id.textView3);
         regReqButton = findViewById(R.id.buttonRegID);
         addMenuButton = findViewById(R.id.buttonMenuID);
+        seeReportButton = findViewById(R.id.buttonMenuID2);
     }
 }

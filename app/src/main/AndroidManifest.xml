@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".USERPackage.UserMainActivity"></activity>
+        <activity android:name=".ADMPackage.ReportActivity"></activity>
+        <activity android:name=".USERPackage.UserMainActivity" />
         <activity android:name=".ADMPackage.RegisterRequestActivity" />
         <activity android:name=".ADMPackage.AdminMainActivity" />
         <activity android:name=".ADMPackage.RegisterMenuPackage.SaturdayRegisterActivity" />
@@ -20,7 +21,7 @@
         <activity android:name=".ADMPackage.RegisterMenuPackage.FridayRegisterActivity" />
         <activity android:name=".ADMPackage.RegisterMenuActivity" />
         <activity android:name=".USERPackage.BookActivity" />
-        <activity android:name=".RegisterStudentActivity"/>
+        <activity android:name=".RegisterStudentActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
