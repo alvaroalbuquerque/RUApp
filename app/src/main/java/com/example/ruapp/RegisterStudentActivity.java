@@ -37,7 +37,7 @@ public class RegisterStudentActivity  extends AppCompatActivity {
         emailText= findViewById(R.id.emailTextID);
         cpfText= findViewById(R.id.sIdTextID);
         coleggerRegisterText = findViewById(R.id.ufalIdTextID);
-        passwordText= findViewById(R.id.passwordTextID);
+        passwordText= findViewById(R.id.passwordEditText);
         password2Text= findViewById(R.id.passwordTextID2);
         confirmButton= findViewById(R.id.registerButtonID);
     }
