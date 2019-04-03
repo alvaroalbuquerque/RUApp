@@ -8,37 +8,52 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.ruapp.Controller.RegisterStudentController;
+
 public class RegisterStudentActivity  extends AppCompatActivity {
-    EditText nameText;
-    EditText emailText;
-    EditText cpfText;
-    EditText coleggerRegisterText;
-    EditText passwordText;
-    EditText password2Text;
-    Button confirmButton;
+    EditText nameEditText;
+    EditText emailEditText;
+    EditText cpfEditText;
+    EditText collegeRegisterEditText;
+    EditText passwordEditText;
+    EditText confirmPasswordEditText;
+    Button requestRegisterButton;
+
+    RegisterStudentController registerStudentController;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Intent currentIntent = getIntent();
 
-        initView();
-        confirmButton.setOnClickListener(new View.OnClickListener() {
+        nameEditText = findViewById(R.id.nameEditText);
+        emailEditText = findViewById(R.id.emailEditText);
+        cpfEditText = findViewById(R.id.cpfEditText);
+        collegeRegisterEditText = findViewById(R.id.collegeRegisterEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
+        requestRegisterButton = findViewById(R.id.requestRegisterButton);
+
+        registerStudentController = new RegisterStudentController(this);
+
+        requestRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ADD NO DB_REG_REQ
-                finish();
+                String nameInput = nameEditText.getText().toString();
+                String emailInput = emailEditText.getText().toString();
+                String cpfInput = cpfEditText.getText().toString();
+                String collegeRegisterInput = collegeRegisterEditText.getText().toString();
+                String passwordInput = passwordEditText.getText().toString();
+                String confirmPasswordInput = confirmPasswordEditText.getText().toString();
+
+                registerStudentController.resquestRegistration(
+                        nameInput,
+                        emailInput,
+                        cpfInput,
+                        collegeRegisterInput,
+                        passwordInput,
+                        confirmPasswordInput);
             }
         });
-    }
-
-    private void initView() {
-        nameText = findViewById(R.id.nameTextID);
-        emailText= findViewById(R.id.emailTextID);
-        cpfText= findViewById(R.id.sIdTextID);
-        coleggerRegisterText = findViewById(R.id.ufalIdTextID);
-        passwordText= findViewById(R.id.passwordEditText);
-        password2Text= findViewById(R.id.passwordTextID2);
-        confirmButton= findViewById(R.id.registerButtonID);
     }
 }

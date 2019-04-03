@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.ruapp.ADMPackage.AdminMainActivity;
-import com.example.ruapp.ADMPackage.RegisterMenuActivity;
 import com.example.ruapp.R;
 
 public class SaturdayRegisterActivity extends AppCompatActivity {
@@ -66,22 +65,22 @@ public class SaturdayRegisterActivity extends AppCompatActivity {
         title = findViewById(R.id.textTitleViewID);
         subTitle1 = findViewById(R.id.textSubTitle1ViewID);
         proteinView   = findViewById(R.id.proteinViewID);
-        proteinText1  = findViewById(R.id.editProteinTextID);
-        proteinText2  = findViewById(R.id.editProtein2TextID);
+        proteinText1  = findViewById(R.id.protein1EditText);
+        proteinText2  = findViewById(R.id.protein2EditText);
         vegLunchView  = findViewById(R.id.vegLunchViewID);
-        vegLunchText  = findViewById(R.id.editVegLunchTextID);
+        vegLunchText  = findViewById(R.id.vegetarianEditText);
         riceView  = findViewById(R.id.riceViewID);
-        riceText  = findViewById(R.id.editRiceTextID);
+        riceText  = findViewById(R.id.riceEditText);
         beanView  = findViewById(R.id.beanViewID);
-        beanText  = findViewById(R.id.editBeanTextID);
+        beanText  = findViewById(R.id.beanEditText);
         food3View  = findViewById(R.id.food3ViewID);
-        food3Text  = findViewById(R.id.editFood3TextID);
+        food3Text  = findViewById(R.id.food3EditText);
         saladView  = findViewById(R.id.saladViewID);
-        saladText  = findViewById(R.id.editSaladTextID);
+        saladText  = findViewById(R.id.saladEditText);
         juiceView  = findViewById(R.id.juiceViewID);
-        juiceText  = findViewById(R.id.editJuiceTextID);
+        juiceText  = findViewById(R.id.juiceEditText);
         fruitView  = findViewById(R.id.fruitViewID);
-        fruitText  = findViewById(R.id.editFruitTextID);
+        fruitText  = findViewById(R.id.fruitEditText);
 
         nextButton = findViewById(R.id.finishButtonID);
     }

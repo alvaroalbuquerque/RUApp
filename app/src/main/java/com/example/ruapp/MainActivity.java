@@ -7,9 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ruapp.Controller.MainActivityController;
 import com.example.ruapp.USERPackage.UserMainActivity;
+
+import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +35,31 @@ public class MainActivity extends AppCompatActivity {
         forgotTextView = findViewById(R.id.forgotTextView);
         registerTextView = findViewById(R.id.registerTextView);
 
-        mainActivityController = new MainActivityController();
+        mainActivityController = new MainActivityController(this);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String loginInput = loginEditText.getText().toString();
+                String passwordInput = passwordEditText.getText().toString();
+
+                mainActivityController.tryLogin(loginInput, passwordInput);
+            }
+        });
+
+        forgotTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        registerTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newIntent = new Intent(MainActivity.this, RegisterStudentActivity.class);
+                startActivity(newIntent);
+            }
+        });
     }
 }

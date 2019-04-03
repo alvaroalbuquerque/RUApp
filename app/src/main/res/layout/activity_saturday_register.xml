@@ -39,14 +39,14 @@
                 android:text="Protein" />
 
             <EditText
-                android:id="@+id/editProteinTextID"
+                android:id="@+id/protein1EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/editProtein2TextID"
+                android:id="@+id/protein2EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -59,7 +59,7 @@
                 android:text="Veg" />
 
             <EditText
-                android:id="@+id/editVegLunchTextID"
+                android:id="@+id/vegetarianEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -72,7 +72,7 @@
                 android:text="Rice" />
 
             <EditText
-                android:id="@+id/editRiceTextID"
+                android:id="@+id/riceEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -85,7 +85,7 @@
                 android:text="Bean" />
 
             <EditText
-                android:id="@+id/editBeanTextID"
+                android:id="@+id/beanEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -98,7 +98,7 @@
                 android:text="Food 3" />
 
             <EditText
-                android:id="@+id/editFood3TextID"
+                android:id="@+id/food3EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -111,7 +111,7 @@
                 android:text="Salad" />
 
             <EditText
-                android:id="@+id/editSaladTextID"
+                android:id="@+id/saladEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -124,7 +124,7 @@
                 android:text="Juice" />
 
             <EditText
-                android:id="@+id/editJuiceTextID"
+                android:id="@+id/juiceEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -137,7 +137,7 @@
                 android:text="Fruit" />
 
             <EditText
-                android:id="@+id/editFruitTextID"
+                android:id="@+id/fruitEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

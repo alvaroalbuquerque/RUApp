@@ -30,6 +30,12 @@
     <string name="next">Próximo</string>
     <string name="back">Voltar</string>
     <string name="see_report">Ver Relatório</string>
+    <string name="selected_date_tv">Data selecionada</string>
+    <string name="unschedule_this_day_bt">Cancelar agendamento</string>
+    <string name="schedule_this_day_bt">Fazer agendamento</string>
+    <string name="show_calendar_bt">Mostrar calendário</string>
+    <string name="lunch_cb">Almoço</string>
+    <string name="dinner_cb">Jantar</string>
 
 
 </resources>

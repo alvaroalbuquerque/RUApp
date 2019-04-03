@@ -40,10 +40,8 @@ public class MyListAdapter extends BaseAdapter {
         ItemModel item = itens.get(position);
 
         TextView nome = view.findViewById(R.id.nameViewListID);
-        TextView calorie = view.findViewById(R.id.calorieViewListID);
 
         nome.setText(item.getNome());
-        calorie.setText(String.valueOf(item.getCal()));
 
         return view;
     }

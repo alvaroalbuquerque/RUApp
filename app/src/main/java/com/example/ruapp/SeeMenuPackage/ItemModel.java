@@ -1,6 +1,7 @@
 package com.example.ruapp.SeeMenuPackage;
 
-public class ItemModel {
+public class
+ItemModel {
     int id;
     String nome;
     double cal;

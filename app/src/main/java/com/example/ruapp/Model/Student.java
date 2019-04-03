@@ -1,6 +1,7 @@
 package com.example.ruapp.Model;
 
 public class Student {
+    private String userId;
     private String name;
     private String email;
     private String CPF;
@@ -11,6 +12,14 @@ public class Student {
         this.name = name;
         this.CPF = CPF;
         this.nMatricula = nMatricula;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -52,4 +61,6 @@ public class Student {
     public void setnMatricula(String nMatricula) {
         this.nMatricula = nMatricula;
     }
+
+
 }

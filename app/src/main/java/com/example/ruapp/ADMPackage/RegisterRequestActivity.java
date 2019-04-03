@@ -4,13 +4,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.ruapp.ADMPackage.RegisterRequestPackage.MyRecViewAdapter;
+import com.example.ruapp.Controller.RegisterRequestController;
+import com.example.ruapp.Controller.RegisterStudentController;
+import com.example.ruapp.Model.LoggedAdmin;
 import com.example.ruapp.Model.Student;
+import com.example.ruapp.Persistence.DataBase;
 import com.example.ruapp.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 public class RegisterRequestActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -19,28 +38,21 @@ public class RegisterRequestActivity extends AppCompatActivity {
 
     List<Student> studentsList = new ArrayList<>();
 
+    private RegisterRequestController registerRequestController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_request);
 
-        studentsList.add(new Student("aaaaa", "123", "321"));
-        studentsList.add(new Student("bb", "123", "321"));
-        studentsList.add(new Student("cc", "123", "321"));
-        studentsList.add(new Student("aaaddaa", "123", "321"));
-        studentsList.add(new Student("aaaaa", "123", "321"));
-        studentsList.add(new Student("bb", "123", "321"));
-        studentsList.add(new Student("cc", "123", "321"));
-        studentsList.add(new Student("aaaddaa", "123", "321"));
-        studentsList.add(new Student("aaaaa", "123", "321"));
-        studentsList.add(new Student("bb", "123", "321"));
-        studentsList.add(new Student("cc", "123", "321"));
-        studentsList.add(new Student("aaaddaa", "123", "321"));
-        studentsList.add(new Student("aaaaa", "123", "321"));
-        studentsList.add(new Student("bb", "123", "321"));
-        studentsList.add(new Student("cc", "123", "321"));
-        studentsList.add(new Student("aaaddaa", "123", "321"));
-       initView();
+        recyclerView = findViewById(R.id.recViewID);
+        recyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+
+        registerRequestController = new RegisterRequestController( this);
+        registerRequestController.fillStudentList(studentsList);
+
+        initView();
     }
 
     public void removeItem(int position){
@@ -49,11 +61,8 @@ public class RegisterRequestActivity extends AppCompatActivity {
     }
 
     public void initView(){
-        recyclerView = findViewById(R.id.recViewID);
-        recyclerView.setHasFixedSize(true);
 
-        mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new MyRecViewAdapter(studentsList);
+        setmAdapter(new MyRecViewAdapter(studentsList));
         recyclerView.setAdapter(mAdapter);
         recyclerView.setLayoutManager(mLayoutManager);
 
@@ -66,15 +75,24 @@ public class RegisterRequestActivity extends AppCompatActivity {
             @Override
             public void onDeleteClick(int position) {
                 //remove da lista e do bd_reg_req mas nao add no bd_students
+                registerRequestController.deleteUser(studentsList.get(position).getnMatricula());
                 removeItem(position);
+
+                //Log.i("STUDENT:" + position, studentsList.get(position).getName()+"/"+studentsList.get(position).getCPF()+"/"+studentsList.get(position).getnMatricula());
             }
 
             @Override
             public void onAcceptClick(int position) {
                 //remove da lista e do bd_reg_req E add no bd_students
+                registerRequestController.updateUser(studentsList.get(position).getnMatricula());
                 removeItem(position);
+                //registerRequestController.updateUser(studentsList.get(position).getnMatricula());
 
             }
         });
+    }
+
+    public void setmAdapter(MyRecViewAdapter mAdapter) {
+        this.mAdapter = mAdapter;
     }
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.ruapp.ADMPackage.RegisterMenuPackage.InsertMenuActivity;
 import com.example.ruapp.R;
 
 public class AdminMainActivity extends AppCompatActivity {
@@ -34,7 +35,7 @@ public class AdminMainActivity extends AppCompatActivity {
         addMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerMenuActivity = new Intent(AdminMainActivity.this,RegisterMenuActivity.class);
+                Intent registerMenuActivity = new Intent(AdminMainActivity.this, InsertMenuActivity.class);
                 startActivity(registerMenuActivity);
             }
         });

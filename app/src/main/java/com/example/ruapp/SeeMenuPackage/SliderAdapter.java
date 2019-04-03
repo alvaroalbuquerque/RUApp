@@ -21,16 +21,17 @@ import java.util.List;
 import java.util.zip.Inflater;
 
 public class SliderAdapter extends PagerAdapter {
-    LargeViewModel[][] largeViewModelsMatrix;
     List<LargeViewModel> largeViewModelsLunch;
     List<LargeViewModel> largeViewModelsDinner;
+
     Context context;
     LayoutInflater layoutInflater;
+
     SliderAdapterControl sliderAdapterControl;
 
     public SliderAdapter(Context context){
         this.context = context;
-        sliderAdapterControl = new SliderAdapterControl();
+        sliderAdapterControl = new SliderAdapterControl(context);
         largeViewModelsLunch = new ArrayList<>();
         largeViewModelsDinner = new ArrayList<>();
         sliderAdapterControl.settingLargeVIewModel(largeViewModelsLunch,largeViewModelsDinner);
@@ -72,6 +73,7 @@ public class SliderAdapter extends PagerAdapter {
         //largeViewModelsThisShift  = largeViewModelsMatrix[position];
         TextView slideTitleText = view.findViewById(R.id.slideTitleTextID);
         ListView largeListView = view.findViewById(R.id.slideLargeListViewID);
+        largeListView.setVerticalScrollBarEnabled(false);
         MyLargeListAdapter myLargeListAdapter = new MyLargeListAdapter(largeViewModelsThisShift,(Activity)context);
         largeListView.setAdapter(myLargeListAdapter);
 

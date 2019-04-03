@@ -46,6 +46,8 @@ public class MyLargeListAdapter extends BaseAdapter {
         ImageView picView = view.findViewById(R.id.imageView);
         ListView miniListView = view.findViewById(R.id.listViewLarge);
         miniListView.setDivider(null);
+        miniListView.setVerticalScrollBarEnabled(true);
+        miniListView.setFastScrollAlwaysVisible(true);
         MyListAdapter meuListAdapter = new MyListAdapter(itens, activity);
         miniListView.setAdapter(meuListAdapter);
         picView.setImageDrawable(activity.getResources().getDrawable(pic));
