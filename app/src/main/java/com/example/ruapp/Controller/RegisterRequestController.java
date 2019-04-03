@@ -10,8 +10,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ruapp.ADMPackage.RegisterRequestActivity;
-import com.example.ruapp.ADMPackage.RegisterRequestPackage.MyRecViewAdapter;
 import com.example.ruapp.Model.LoggedAdmin;
 import com.example.ruapp.Model.Student;
 import com.example.ruapp.Persistence.DataBase;
@@ -20,12 +18,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 public class RegisterRequestController {
     Context context;
@@ -45,7 +40,6 @@ public class RegisterRequestController {
                         if(!serverResponse.isEmpty()){
                             if(serverResponse.startsWith("1")){
                                 String jsonEncoded = serverResponse.substring(1);
-                                Toast.makeText(context, jsonEncoded, Toast.LENGTH_SHORT).show();
                                 try
                                 {
                                     JSONArray jsonArray = new JSONArray(jsonEncoded);
@@ -76,7 +70,6 @@ public class RegisterRequestController {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.i("zap", volleyError.getMessage());
                         Toast.makeText(context, "Não foi possível requisitar o servidor !", Toast.LENGTH_SHORT).show();
                     }
                 }) {
@@ -111,7 +104,6 @@ public class RegisterRequestController {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.i("zap", volleyError.getMessage());
                         Toast.makeText(context, "Não foi possível requisitar o servidor !", Toast.LENGTH_SHORT).show();
                     }
                 }) {
@@ -147,7 +139,6 @@ public class RegisterRequestController {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.i("zap", volleyError.getMessage());
                         Toast.makeText(context, "Não foi possível requisitar o servidor !", Toast.LENGTH_SHORT).show();
                     }
                 }) {

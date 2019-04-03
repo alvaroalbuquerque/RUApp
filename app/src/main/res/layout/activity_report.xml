@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ADMPackage.ReportActivity">
+    tools:context=".View.ADMPackage.ReportActivity">
 
     <TextView
         android:id="@+id/dinnerRel"
@@ -60,6 +60,8 @@
 
     <Button
         android:id="@+id/dateButton"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
         android:layout_width="145dp"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
@@ -77,6 +79,8 @@
 
     <Button
         android:id="@+id/backButton"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

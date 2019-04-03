@@ -5,14 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ADMPackage.RegisterRequestActivity">
+    tools:context=".View.ADMPackage.RegisterRequestActivity">
 
     <TextView
         android:id="@+id/reReqViewID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="TextView"
+        android:text="Solicitações"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorWhite"
         android:textSize="24sp" />
 
     <android.support.v7.widget.RecyclerView

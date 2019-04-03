@@ -14,16 +14,16 @@ public class MenuDinnerModel {
     String veg3;
 
     public MenuDinnerModel(MenuModelBuilder menuModelBuilder) {
-        this.soup = soup;
-        this.maindish1 = maindish1;
-        this.maindish2 = maindish2;
-        this.maindish3 = maindish3;
-        this.pies = pies;
-        this.cakes = cakes;
-        this.drink = drink;
-        this.veg1 = veg1;
-        this.veg2 = veg2;
-        this.veg3 = veg3;
+        this.soup = menuModelBuilder.soup;
+        this.maindish1 = menuModelBuilder.maindish1;
+        this.maindish2 = menuModelBuilder.maindish2;
+        this.maindish3 = menuModelBuilder.maindish3;
+        this.pies = menuModelBuilder.pies;
+        this.cakes = menuModelBuilder.cakes;
+        this.drink = menuModelBuilder.drink;
+        this.veg1 = menuModelBuilder.veg1;
+        this.veg2 = menuModelBuilder.veg2;
+        this.veg3 = menuModelBuilder.veg3;
     }
 
     public static class MenuModelBuilder {
@@ -175,5 +175,11 @@ public class MenuDinnerModel {
 
     public void setVeg3(String veg3) {
         this.veg3 = veg3;
+    }
+
+
+    @Override
+    public String toString() {
+        return getSoup() + getMaindish1() + getMaindish2() + getMaindish3() + getCakes() + getPies() + getDrink() + getVeg1() + getVeg2() + getVeg3();
     }
 }

@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".USERPackage.BookActivity">
+    tools:context=".View.USERPackage.BookActivity">
 
     <Button
         android:id="@+id/unscheduleThisDayButton"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -26,6 +28,8 @@
 
     <Button
         android:id="@+id/scheduleThisDayButton"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,6 +47,8 @@
 
     <Button
         android:id="@+id/showCalendarButton"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

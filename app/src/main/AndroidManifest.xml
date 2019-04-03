@@ -11,28 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ADMPackage.RegisterMenuPackage.InsertMenuActivity"></activity>
-        <activity android:name=".ADMPackage.ReportActivity" />
-        <activity android:name=".USERPackage.UserMainActivity" />
-        <activity android:name=".ADMPackage.RegisterRequestActivity" />
-        <activity android:name=".ADMPackage.AdminMainActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuPackage.SaturdayRegisterActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuPackage.MondayRegisterActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuPackage.TuesdayRegisterActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuPackage.WednesdayRegisterActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuPackage.ThrusdayRegisterActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuPackage.FridayRegisterActivity" />
-        <activity android:name=".ADMPackage.RegisterMenuActivity" />
-        <activity android:name=".USERPackage.BookActivity" />
-        <activity android:name=".RegisterStudentActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".View.ADMPackage.RegisterMenuPackage.InsertMenuActivity"></activity>
+        <activity android:name=".View.ADMPackage.ReportActivity" />
+        <activity android:name=".View.USERPackage.UserMainActivity" />
+        <activity android:name=".View.ADMPackage.RegisterRequestActivity" />
+        <activity android:name=".View.ADMPackage.AdminMainActivity" />
+        <activity android:name=".View.USERPackage.BookActivity" />
+        <activity android:name=".View.MAINPackage.RegisterStudentActivity" />
+        <activity android:name=".View.MAINPackage.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".USERPackage.SeeMenuActivity" />
+        <activity android:name=".View.USERPackage.SeeMenuActivity" />
     </application>
 
 </manifest>

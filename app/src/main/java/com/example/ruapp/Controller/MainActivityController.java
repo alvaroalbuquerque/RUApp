@@ -2,7 +2,6 @@ package com.example.ruapp.Controller;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -11,12 +10,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ruapp.ADMPackage.AdminMainActivity;
-import com.example.ruapp.MainActivity;
+import com.example.ruapp.View.ADMPackage.AdminMainActivity;
 import com.example.ruapp.Model.LoggedAdmin;
 import com.example.ruapp.Model.LoggedStudent;
 import com.example.ruapp.Persistence.DataBase;
-import com.example.ruapp.USERPackage.UserMainActivity;
+import com.example.ruapp.View.USERPackage.UserMainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

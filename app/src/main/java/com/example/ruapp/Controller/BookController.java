@@ -17,7 +17,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ruapp.Model.LoggedStudent;
 import com.example.ruapp.Persistence.DataBase;
-import com.example.ruapp.USERPackage.BookActivity;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -78,7 +77,6 @@ public class BookController {
                     @Override
                     public void onResponse(String serverResponse) {
                         if (!serverResponse.isEmpty()) {
-                            Log.i("zap", serverResponse);
                             Toast.makeText(context, serverResponse, Toast.LENGTH_SHORT).show();
                         }
                     }

@@ -3,8 +3,6 @@ package com.example.ruapp.Controller;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +13,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ruapp.ADMPackage.ReportActivity;
 import com.example.ruapp.Model.LoggedAdmin;
 import com.example.ruapp.Persistence.DataBase;
 

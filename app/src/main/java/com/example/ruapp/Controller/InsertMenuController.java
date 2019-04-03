@@ -14,14 +14,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ruapp.ADMPackage.RegisterMenuPackage.InsertMenuActivity;
+import com.example.ruapp.View.ADMPackage.RegisterMenuPackage.InsertMenuActivity;
 import com.example.ruapp.Model.MenuDinnerModel;
 import com.example.ruapp.Model.MenuLunchModel;
 import com.example.ruapp.Persistence.DataBase;
 
-import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -71,16 +69,14 @@ public class InsertMenuController {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String serverResponse) {
-                        if (!serverResponse.isEmpty()) {
-                            Log.i("zap", serverResponse);
-                            Toast.makeText(context, serverResponse, Toast.LENGTH_SHORT).show();
-                        }
+                        Toast.makeText(context, serverResponse, Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         Toast.makeText(context, "Não foi possível requisitar o servidor !", Toast.LENGTH_SHORT).show();
+                        Log.i("lunch:", volleyError.getMessage());
                     }
                 }) {
             @Override
@@ -110,16 +106,14 @@ public class InsertMenuController {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String serverResponse) {
-                        if (!serverResponse.isEmpty()) {
-                            Log.i("zap", serverResponse);
-                            Toast.makeText(context, serverResponse, Toast.LENGTH_SHORT).show();
-                        }
+                        Toast.makeText(context, serverResponse, Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         Toast.makeText(context, "Não foi possível requisitar o servidor !", Toast.LENGTH_SHORT).show();
+                        Log.i("dinner:", volleyError.getMessage());
                     }
                 }) {
             @Override
@@ -132,7 +126,7 @@ public class InsertMenuController {
                 params.put("date", selectedDate);
                 params.put("soup", menuDinner.getSoup());
                 params.put("maindish1", menuDinner.getMaindish1());
-                params.put("maindish2", menuDinner.getMaindish2());
+                params.put("maindish2", " " + menuDinner.getMaindish2());
                 params.put("maindish3", menuDinner.getMaindish3());
                 params.put("pies", menuDinner.getPies());
                 params.put("cakes", menuDinner.getCakes());
@@ -147,7 +141,8 @@ public class InsertMenuController {
         };
 
         RequestQueue requestQueue = Volley.newRequestQueue(context);
-        requestQueue.add(stringRequest);
-        requestQueue.add(stringRequest1);
+
+        if(hasLunch) requestQueue.add(stringRequest);
+        if(hasDinner) requestQueue.add(stringRequest1);
     }
 }

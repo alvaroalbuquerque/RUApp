@@ -14,6 +14,14 @@ public class Student {
         this.nMatricula = nMatricula;
     }
 
+    public Student(String name, String email, String CPF, String nMatricula, String password) {
+        this.name = name;
+        this.email = email;
+        this.CPF = CPF;
+        this.nMatricula = nMatricula;
+        this.password = password;
+    }
+
     public String getUserId() {
         return userId;
     }
