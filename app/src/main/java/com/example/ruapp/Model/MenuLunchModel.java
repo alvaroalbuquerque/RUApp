@@ -88,4 +88,76 @@ public class MenuLunchModel {
             return new MenuLunchModel(this);
         }
     }
+
+    public String getProtein1() {
+        return protein1;
+    }
+
+    public void setProtein1(String protein1) {
+        this.protein1 = protein1;
+    }
+
+    public String getProtein2() {
+        return protein2;
+    }
+
+    public void setProtein2(String protein2) {
+        this.protein2 = protein2;
+    }
+
+    public String getVegetarian() {
+        return vegetarian;
+    }
+
+    public void setVegetarian(String vegetarian) {
+        this.vegetarian = vegetarian;
+    }
+
+    public String getRice() {
+        return rice;
+    }
+
+    public void setRice(String rice) {
+        this.rice = rice;
+    }
+
+    public String getBean() {
+        return bean;
+    }
+
+    public void setBean(String bean) {
+        this.bean = bean;
+    }
+
+    public String getFood3() {
+        return food3;
+    }
+
+    public void setFood3(String food3) {
+        this.food3 = food3;
+    }
+
+    public String getSalad() {
+        return salad;
+    }
+
+    public void setSalad(String salad) {
+        this.salad = salad;
+    }
+
+    public String getJuice() {
+        return juice;
+    }
+
+    public void setJuice(String juice) {
+        this.juice = juice;
+    }
+
+    public String getFruit() {
+        return fruit;
+    }
+
+    public void setFruit(String fruit) {
+        this.fruit = fruit;
+    }
 }

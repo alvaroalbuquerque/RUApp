@@ -64,10 +64,10 @@ public class InsertMenuController {
         datePickerDialog.show();
     }
 
-    public void insertMenu(String selectedDate, MenuLunchModel menuLunch, MenuDinnerModel menuDinner, boolean hasLunch, boolean hasDinner) {
+    public void insertMenu(final String selectedDate, final MenuLunchModel menuLunch, final MenuDinnerModel menuDinner, boolean hasLunch, boolean hasDinner) {
         String finalHttpUrl = DataBase.getInstance().getHttpServer();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalHttpUrl.concat(""),
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalHttpUrl.concat("insert_lunch_menu.php"),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String serverResponse) {
@@ -90,7 +90,56 @@ public class InsertMenuController {
                 Map<String, String> params = new HashMap<String, String>();
 
                 // Adding All values to Params.
+                params.put("date", selectedDate);
+                params.put("protein1", menuLunch.getProtein1());
+                params.put("protein2", menuLunch.getProtein2());
+                params.put("vegetarian", menuLunch.getVegetarian());
+                params.put("rice", menuLunch.getRice());
+                params.put("bean", menuLunch.getBean());
+                params.put("food3", menuLunch.getFood3());
+                params.put("salad", menuLunch.getSalad());
+                params.put("juice", menuLunch.getJuice());
+                params.put("fruit", menuLunch.getFruit());
 
+                return params;
+            }
+
+        };
+
+        StringRequest stringRequest1 = new StringRequest(Request.Method.POST, finalHttpUrl.concat("insert_dinner_menu.php"),
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String serverResponse) {
+                        if (!serverResponse.isEmpty()) {
+                            Log.i("zap", serverResponse);
+                            Toast.makeText(context, serverResponse, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Toast.makeText(context, "Não foi possível requisitar o servidor !", Toast.LENGTH_SHORT).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+
+                // Creating Map String Params.
+                Map<String, String> params = new HashMap<String, String>();
+
+                // Adding All values to Params.
+                params.put("date", selectedDate);
+                params.put("soup", menuDinner.getSoup());
+                params.put("maindish1", menuDinner.getMaindish1());
+                params.put("maindish2", menuDinner.getMaindish2());
+                params.put("maindish3", menuDinner.getMaindish3());
+                params.put("pies", menuDinner.getPies());
+                params.put("cakes", menuDinner.getCakes());
+                params.put("drink", menuDinner.getDrink());
+                params.put("veg1", menuDinner.getVeg1());
+                params.put("veg2", menuDinner.getVeg2());
+                params.put("veg3", menuDinner.getVeg3());
 
                 return params;
             }
@@ -99,5 +148,6 @@ public class InsertMenuController {
 
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         requestQueue.add(stringRequest);
+        requestQueue.add(stringRequest1);
     }
 }

@@ -96,4 +96,84 @@ public class MenuDinnerModel {
             return new MenuDinnerModel(this);
         }
     }
+
+    public String getSoup() {
+        return soup;
+    }
+
+    public void setSoup(String soup) {
+        this.soup = soup;
+    }
+
+    public String getMaindish1() {
+        return maindish1;
+    }
+
+    public void setMaindish1(String maindish1) {
+        this.maindish1 = maindish1;
+    }
+
+    public String getMaindish2() {
+        return maindish2;
+    }
+
+    public void setMaindish2(String maindish2) {
+        this.maindish2 = maindish2;
+    }
+
+    public String getMaindish3() {
+        return maindish3;
+    }
+
+    public void setMaindish3(String maindish3) {
+        this.maindish3 = maindish3;
+    }
+
+    public String getPies() {
+        return pies;
+    }
+
+    public void setPies(String pies) {
+        this.pies = pies;
+    }
+
+    public String getCakes() {
+        return cakes;
+    }
+
+    public void setCakes(String cakes) {
+        this.cakes = cakes;
+    }
+
+    public String getDrink() {
+        return drink;
+    }
+
+    public void setDrink(String drink) {
+        this.drink = drink;
+    }
+
+    public String getVeg1() {
+        return veg1;
+    }
+
+    public void setVeg1(String veg1) {
+        this.veg1 = veg1;
+    }
+
+    public String getVeg2() {
+        return veg2;
+    }
+
+    public void setVeg2(String veg2) {
+        this.veg2 = veg2;
+    }
+
+    public String getVeg3() {
+        return veg3;
+    }
+
+    public void setVeg3(String veg3) {
+        this.veg3 = veg3;
+    }
 }
